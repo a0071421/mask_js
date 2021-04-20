@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Mask Map</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f2fdb5a1bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.70.0/dist/L.Control.Locate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.70.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="wrap">
+        
+        <div class="sidebar">
+            <a class= "sideBtn" href="#">
+              <span><i class="fas fa-arrow-left"></i></span>
+            </a>
+            <div class="searchDiv">
+              <div class="flex">
+                <select id="City">
+                </select>
+                <select  id="Dist">
+                </select>
+              </div>
+              
+              <div class="search">
+                  <input class="inputSearch" type="text" placeholder="搜尋地址...">
+                  <a href="#" class="searchIcon fas fa-search"></a>
+              </div>
+
+
+            </div>
+            
+            <h2 class="emptyHint">無相符資料</h2>
+            <ul class="list">
+              
+
+            </ul>
+            <div class="listLoading loading"></div>
+        </div>
+
+        
+        <div id="map">
+            <div class="mapLoading loading"></div>
+        </div>
+    </div>
+
+    
+    <script src="all.js"></script>
+</body>
+</html>
